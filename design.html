@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<title>NetPoker Texas Hold'em - Design</title>
 <link href="master.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -21,9 +21,12 @@
 </div>
 <div id="left">
   <h1>Design</h1>
-  <p>De senaste åren har Texas Hold’em flyttas från saloonernas rökfyllda rum till de finaste casinona i Las Vegas. Spelet har mognat till ett familjespel vilket kan förgylla mörka novemberkvällar i hela vårt avlånga land, långt från dess födelseplats i Robstown, Texas.    </p>
-  <p>Vi har utvecklat ett Texas Hold’em spel för 4 spelare över ett nätverk. Systemet  består av en lobby och en spelapplikation. Varje spelare behöver en spelapplikation. </p>
-  <p>När en spelapplikation är ansluten till lobbyn kan spelaren starta sin egen server, se andra tillgängliga servrar och ansluta till dessa. Spelapplikationen innehåller, förutom möjligheten att ansluta till lobbyn, en serverdel och en klientdel. Varje spel behöver en server, vilken alltså körs hos en av spelarna. Alla spelare, inklusive spelaren med servern, ansluter sedan till denna server med hjälp av klientdelen av spelapplikationen.</p>
+  <p>Modellen består av en servertråd som alltid är igång och är värd för lobbyn. Varje klient består sedan av dels en servertråd och en klienttråd. En klient kan vara värd för ett spel och då körs servertråden och klienttråden, de klienter som bara är är deltagare kör bara klienttråden. För all kommunikation kommer UDP användas, detta för att brandväggarna hos klienterna gör att TCP inte är brukbart. UDP-paketen kommer skickas med best-effort, det vill säga att ingen felhantering är implementerat. Detta då spelet sker i realtid och det därför kommer komma fram ett till paket strax efter.</p>
+
+<p>Modellen för lobbyn finns på lobbyservern och modellen för spelet finns på varje klient. Klienten som är värd för spelet blir sedan den som kör spelet. Klienterna har sedan en vy som kan visa det lobbyservern skickar till dem samt en spelvy som visar det spelservern skickar till dem.</p>
+<img src="images/Bild 3.png"/>
+
+<p>I bilden under syns hur vi tänkt att kommunikationen ska vara uppbyggd.</p>
 </div>
 <div id="right"><img src="images/chips.jpg" width="250" height="193" /></div>
 <div id="footer"> &copy; 2012 Robert Bagge, Olle Klang, Lars Nyström, Karl-Gustav Nordehammar

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<title>NetPoker Texas Hold'em - Utvärdering</title>
 <link href="master.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -21,9 +21,17 @@
 </div>
 <div id="left">
   <h1>Utvärdering</h1>
-  <p>De senaste åren har Texas Hold’em flyttas från saloonernas rökfyllda rum till de finaste casinona i Las Vegas. Spelet har mognat till ett familjespel vilket kan förgylla mörka novemberkvällar i hela vårt avlånga land, långt från dess födelseplats i Robstown, Texas.    </p>
-  <p>Vi har utvecklat ett Texas Hold’em spel för 4 spelare över ett nätverk. Systemet  består av en lobby och en spelapplikation. Varje spelare behöver en spelapplikation. </p>
-  <p>När en spelapplikation är ansluten till lobbyn kan spelaren starta sin egen server, se andra tillgängliga servrar och ansluta till dessa. Spelapplikationen innehåller, förutom möjligheten att ansluta till lobbyn, en serverdel och en klientdel. Varje spel behöver en server, vilken alltså körs hos en av spelarna. Alla spelare, inklusive spelaren med servern, ansluter sedan till denna server med hjälp av klientdelen av spelapplikationen.</p>
+  <p>Under rubriken ‘Kravspecifikation’ kan våra krav på programmet ses. Krav 3, 4 och 7 är inte uppfyllda mest på grund av tidsbrist.</p>
+
+<p>Just nu kan man bara spela ett spel med 4 spelare vilket gör krav 3 och 4 ouppfyllda. Krav 3 vilket säger att det ska gå att spela med minst 2 spelare har vi kompletterat genom att de andra två platserna på bordet ersätts av 2 stycken Dummybots som kan hittas i vårt programpaket under klassen ‘DummyClient.java’.</p>
+
+<p>Att komplettera så att både krav 3 och 4 blir uppfyllda skulle kräva ungefär två till fyra arbetsdagar till. Det skulle innebära att ändra hela GUI:t och även göra om design av modellstrukturen.</p>
+
+<p>Det vi tyckte var svårast att skapa ett fungerande protokoll som använder sig av UDP och att dessutom implementera en ‘Acknowledge funktion’ till det. Det lättaste var att skapa en enkel webbsida som presentation.</p>
+
+<p>Vi underlättade arbetet för oss en del genom att använda en open source modell av ett pokerspel som vi sedan modifierade för att fungera med vår nätverksfunktion.</p>
+
+<p>Projektuppgiften som sådan var väldigt givande då det är första gången vi har gjort något komplett i programmeringsteknik, dvs ett projekt från grunden till ett färdigt program. Det som skulle kunna vara bättre är att införa 2-3 obligatoriska handledarmöten utspridda under kursens gång för att få hjälp och feedback på det som gjorts.</p>
 </div>
 <div id="right"><img src="images/chips.jpg" width="250" height="193" /></div>
 <div id="footer"> &copy; 2012 Robert Bagge, Olle Klang, Lars Nyström, Karl-Gustav Nordehammar
